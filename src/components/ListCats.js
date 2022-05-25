@@ -1,4 +1,4 @@
-import useGetCats from '../hooks/useGetCats'
+import { useGetCats } from '../hooks/useGetCats'
 import { Spinner } from './Spinner'
 import '../style/ListCats.css'
 import { Cards } from './Cards'

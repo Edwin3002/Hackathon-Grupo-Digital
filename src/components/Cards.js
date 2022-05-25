@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import '../style/cards.css'
+import { deleteCat } from '../utils/crud'
 
 export const Cards = ({ catData }) => {
 	return (
@@ -20,6 +21,7 @@ export const Cards = ({ catData }) => {
 				<Card.Body>
 					<Card.Title>{catData ? catData.name : 'Gato'}</Card.Title>
 				</Card.Body>
+				<button onClick={() => deleteCat(catData.id)}>Delete</button>
 			</Card>
 		</div>
 	)
