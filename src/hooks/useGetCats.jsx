@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { apiCats } from '../utils/apiUrl'
 import { fetchData } from '../utils/fetchData'
 
-export default function useGetCats() {
+export function useGetCats() {
 	const [list, setList] = useState([])
 	const [loading, setLoading] = useState(true)
 	const [error, setError] = useState(null)
@@ -16,5 +16,5 @@ export default function useGetCats() {
 			.catch((error) => setError(error))
 	}, [])
 
-	return { list, loading, error }
+	return { list, loading, error, setList }
 }
