@@ -13,7 +13,7 @@ export function NavBar() {
 		// </header>
 		<Navbar bg="light" expand="lg">
 		<Container>
-		  <Navbar.Brand href="#home">Gatitos</Navbar.Brand>
+		  <Navbar.Brand href="#home">Generador de Gatitos</Navbar.Brand>
 		  <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		  <Navbar.Collapse id="basic-navbar-nav">
 			<Nav className="me-auto">
