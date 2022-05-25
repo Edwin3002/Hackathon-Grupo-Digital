@@ -1,12 +1,7 @@
-import '../style/App.css'
-import { Cards } from './Cards';
+import { AppRoutes } from '../routes/AppRoutes'
 
 function App() {
-  return (
-    <div className="App">
-      <Cards/>
-    </div>
-  );
+	return <AppRoutes />
 }
 
-export default App;
+export default App

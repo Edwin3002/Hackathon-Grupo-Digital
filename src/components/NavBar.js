@@ -1,13 +1,12 @@
+import { NavLink } from './NavLink'
 import '../style/NavBar.css'
 export function NavBar() {
 	return (
 		<header className='navMenu'>
-			<h1>home</h1>
+			<NavLink to='/'>Home</NavLink>
 			<nav className='navMenu__navegate '>
-				<button>Generate</button>
-				<button>
-					{/* <Link to='/caracters'>History</Link> */}
-					favorites
+				<button className='navMEnu--btn'>
+					<NavLink to='/favorites'>favorites</NavLink>
 				</button>
 			</nav>
 		</header>
