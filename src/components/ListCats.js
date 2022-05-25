@@ -1,5 +1,4 @@
 import useGetCats from '../hooks/useGetCats'
-
 import { Spinner } from './Spinner'
 import '../style/ListCats.css'
 import { Cards } from './Cards'
@@ -14,7 +13,7 @@ export function ListCats() {
 		<>
 			<section className='list'>
 				{list.map((cat) => (
-					<Cards key={cat.id} />
+					<Cards key={cat.id} catData={cat} />
 				))}
 			</section>
 		</>
