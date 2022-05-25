@@ -1,8 +1,8 @@
-import { Cards } from '../components/Cards'
 import { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { apiCats, apiUrl } from '../utils/apiUrl.js'
 import '../style/App.css'
+import { CardCats } from '../components/CardsCats'
 
 export function Home() {
 	const [cat, setCat] = useState()
@@ -18,7 +18,8 @@ export function Home() {
 		fetch(apiCats,{
 			method: 'POST',
 			body: JSON.stringify({
-				url: cat.url
+				url: cat.url,
+				name: 'Gato'
 			}),
 			headers: {
 				"Content-type" : "application/json; charset=UTF-8"
@@ -31,8 +32,8 @@ export function Home() {
 	}, [])
 
 	return (
-		<main className='App'>
-			<Cards catData={cat} />
+		<main className=' p-5'>
+			<CardCats catData={cat} />
 			<div className='mx-auto my-4 d-flex justify-content-around'>
 
 				<Button variant='success'  onClick={() => getData()}>

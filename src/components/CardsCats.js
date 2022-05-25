@@ -1,11 +1,10 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import '../style/cards.css'
-import { deleteCat } from '../utils/crud'
 
-export const Cards = ({ catData }) => {
+export const CardCats = ({ catData }) => {
 	return (
-		<div className='my-5'>
+		<div>
 			<Card className='m-auto' style={{ width: '18rem' }}>
 				<div className='contImg'>
 					<Card.Img
@@ -19,9 +18,8 @@ export const Cards = ({ catData }) => {
 					/>
 				</div>
 				<Card.Body>
-					<Card.Title>{catData ? catData.name : 'Gato'}</Card.Title>
+					<Card.Title>Gato</Card.Title>
 				</Card.Body>
-				<Button variant='danger' className='m-2' onClick={() => deleteCat(catData.id)}>Delete</Button>
 			</Card>
 		</div>
 	)

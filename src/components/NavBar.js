@@ -17,8 +17,8 @@ export function NavBar() {
 		  <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		  <Navbar.Collapse id="basic-navbar-nav">
 			<Nav className="me-auto">
-			<NavLink className='bg-danger' to='/'><Button className='mx-1'>Home</Button></NavLink>
-			  <NavLink to='/favorites'><Button className='mx-1'>Favorites</Button></NavLink>
+			<NavLink className='bg-danger' to='/'><Button className='m-1'>Home</Button></NavLink>
+			  <NavLink to='/favorites'><Button className='m-1'>Favorites</Button></NavLink>
 			</Nav>
 		  </Navbar.Collapse>
 		</Container>
