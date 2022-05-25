@@ -1,0 +1,10 @@
+.contImg {
+  display: flex;
+  width: 100%;
+  height: 300px;
+}
+.cImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
