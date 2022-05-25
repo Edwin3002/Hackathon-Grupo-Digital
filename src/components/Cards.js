@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import '../style/cards.css'
 import { deleteCat } from '../utils/crud'
 
@@ -18,10 +18,10 @@ export const Cards = ({ catData }) => {
 						}
 					/>
 				</div>
-				<Card.Body>
+				{/* <Card.Body>
 					<Card.Title>{catData ? catData.name : 'Gato'}</Card.Title>
-				</Card.Body>
-				<button onClick={() => deleteCat(catData.id)}>Delete</button>
+				</Card.Body> */}
+				<Button variant='danger' className='m-2' onClick={() => deleteCat(catData.id)}>Delete</Button>
 			</Card>
 		</div>
 	)
