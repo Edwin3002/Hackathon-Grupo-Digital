@@ -2,19 +2,33 @@ import { apiCats } from './apiUrl'
 
 const deleteCat = async (id) => {
 	if (!id) return
-	await fetch(`${apiCats}${id}`, {
+
+	const url = `${apiCats}${id}`
+
+	await fetch(url, {
 		method: 'DELETE',
 	})
+
 	window.location.reload()
 }
 
-export { deleteCat }
+const editCat = async (id, name) => {
+	if (!id) return
 
-/**
- * 	editarPerfil(usuario, id) {
-		axios
-			.put(`${this.url}${id}`, usuario)
-			.then((data) => console.log(data))
-			.catch((err) => console.warn(err));
-	}
- */
+	const url = `${apiCats}${id}`
+
+	await fetch(url, {
+		method: 'PUT',
+		body: JSON.stringify({
+			id,
+			name,
+		}),
+		headers: {
+			'Content-Type': 'application/json; chartset=UTF-8',
+		},
+	})
+
+	window.location.reload()
+}
+
+export { deleteCat, editCat }
