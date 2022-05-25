@@ -1,24 +1,19 @@
 import { useEffect, useState } from 'react'
+import { apiCats } from '../utils/apiUrl'
+import { fetchData } from '../utils/fetchData'
 
 export default function useGetCats() {
 	const [list, setList] = useState([])
-	const [loading, setLoading] = useState(false)
+	const [loading, setLoading] = useState(true)
 	const [error, setError] = useState(null)
-	const url = 'https://cats-digital-group.herokuapp.com/cats/'
 
 	useEffect(() => {
-		setLoading(true)
-		const fetchData = async () => {
-			try {
-				const response = await fetch(url)
-				const data = await response.json()
+		fetchData(apiCats)
+			.then((data) => {
 				setList(data)
 				setLoading(false)
-			} catch (error) {
-				setError(error)
-			}
-		}
-		fetchData()
+			})
+			.catch((error) => setError(error))
 	}, [])
 
 	return { list, loading, error }

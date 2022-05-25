@@ -3,7 +3,6 @@ import { Card } from 'react-bootstrap'
 import '../style/cards.css'
 
 export const Cards = ({ catData }) => {
-	console.log('🚀 ~ file: Cards.js ~ line 6 ~ Cards ~ catData', catData)
 	return (
 		<div>
 			<Card className='m-auto' style={{ width: '18rem' }}>
